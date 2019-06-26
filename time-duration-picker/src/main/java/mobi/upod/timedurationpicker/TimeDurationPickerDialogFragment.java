@@ -1,7 +1,9 @@
 package mobi.upod.timedurationpicker;
 
 import android.app.Dialog;
-import android.app.DialogFragment;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import android.os.Bundle;
 
 /**
@@ -18,6 +20,7 @@ import android.os.Bundle;
 public abstract class TimeDurationPickerDialogFragment
         extends DialogFragment implements TimeDurationPickerDialog.OnDurationSetListener {
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new TimeDurationPickerDialog(getActivity(), this, getInitialDuration(), setTimeUnits());
